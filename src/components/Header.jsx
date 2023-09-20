@@ -1,4 +1,6 @@
-const CameraComponent = () => {
+import { useRef, useState, useEffect } from "react";
+
+const Header = () => {
   const videoRef = useRef(null);
   const [facingMode, setFacingMode] = useState("user");
 
@@ -31,3 +33,5 @@ const CameraComponent = () => {
     </div>
   );
 };
+
+export default Header;
