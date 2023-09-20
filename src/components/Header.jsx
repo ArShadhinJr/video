@@ -1,6 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
-
-const Header = () => {
+const CameraComponent = () => {
   const videoRef = useRef(null);
   const [facingMode, setFacingMode] = useState("user");
 
@@ -28,8 +26,8 @@ const Header = () => {
     <div>
       <video style={{ width: "400px", height: "300px", borderRadius: "90%" }} ref={videoRef} autoPlay></video>
       <button onClick={toggleCamera}>Toggle Camera</button>
+      <button onClick={() => setFacingMode("user")}>Front Camera</button>
+      <button onClick={() => setFacingMode("environment")}>Back Camera</button>
     </div>
   );
 };
-
-export default Header;
